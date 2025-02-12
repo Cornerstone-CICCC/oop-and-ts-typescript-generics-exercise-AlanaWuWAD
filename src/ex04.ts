@@ -2,20 +2,20 @@
 // Add methods to `getValue` and `setValue`.
 // Initialize it with "Initial Value", update it to "Updated Value", and log the new value.
 
-class Container {
-  private value;
+class Container <T>{
+  private value:T;
 
-  constructor(value) {
+  constructor(value:T) {
     this.value = value;
   }
 
   getValue = () => this.value;
 
-  setValue = (value) => {
+  setValue = (value:T) => {
     this.value = value;
   };
 }
 
-const stringContainer = new Container("Initial Value");
+const stringContainer = new Container <string>("Initial Value");
 stringContainer.setValue("Updated Value");
 console.log(stringContainer.getValue()); // Expected output: "Updated Value"
